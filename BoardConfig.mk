@@ -44,6 +44,9 @@ TARGET_KERNEL_HEADER_ARCH := arm
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(DEVICE_PATH)/dt.img --board SRPOJ08A000KU
 #TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 
+# CPUsets
+ENABLE_CPUSETS := true
+
 # Partitions
 BOARD_HAS_NO_MISC_PARTITION := false
 TARGET_USERIMAGES_USE_EXT4 := true
