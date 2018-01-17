@@ -45,7 +45,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 -
 #TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 
 # CPUsets
-ENABLE_CPUSETS := true
+ENABLE_CPUSETS := false
 
 # Partitions
 BOARD_HAS_NO_MISC_PARTITION := false
