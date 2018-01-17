@@ -225,7 +225,7 @@
     <bool name="config_buttonLightOnKeypressOnly">false</bool>
 
     <!-- Doze (Ambient display) -->
-    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string> -->
 
     <bool name="config_dozeAfterScreenOff">true</bool>
 
@@ -236,13 +236,32 @@
          device from the display on/off state. -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
-    <!-- If true, the display will be shifted around in ambient mode. -->
-    <bool name="config_enableBurnInProtection">true</bool>
-
     <!-- Allow screen mirroring/miracast -->
     <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- The device supports freeform window management -->
     <bool name="config_freeformWindowManagement">true</bool>
-    
+
+    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
+         May be less than the minimum allowed brightness setting
+         that can be set by the user. -->
+    <integer name="config_screenBrightnessDoze">10</integer>
+
+    <!-- ComponentName of a dream to show whenever the system would otherwise have
+        gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
+        try to start this dream if possible.  The dream should typically call startDozing()
+        to put the display into a low power state and allow the application processor
+        to be suspended.  When the dream ends, the system will go to sleep as usual.
+        Specify the component name or an empty string if none.
+        Note that doze dreams are not subject to the same start conditions as ordinary dreams.
+        Doze dreams will run whenever the power manager is in a dozing state. -->
+   <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+   
+   <!-- Control the behavior when the user short presses the power button.
+               0 - Nothing
+               1 - Go to sleep (doze)
+               2 - Really go to sleep (don't doze)
+               3 - Really go to sleep and go home (don't doze)
+  -->
+   <integer name="config_shortPressOnPowerBehavior">1</integer>
 </resources>
