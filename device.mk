@@ -68,7 +68,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.exynos5
+    power.universal7580
 
 # Shims
 PRODUCT_PACKAGES += \
