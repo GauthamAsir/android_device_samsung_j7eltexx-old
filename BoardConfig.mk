@@ -39,6 +39,9 @@ TARGET_KERNEL_SOURCE := kernel/samsung/j7elte
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm
 
+# PowerHAL
+TARGET_POWERHAL_VARIANT := samsung
+
 # Extracted with libbootimg
 #BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(DEVICE_PATH)/dt.img --board SRPOJ08A000KU
