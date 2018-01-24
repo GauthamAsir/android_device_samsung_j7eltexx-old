@@ -1,4 +1,5 @@
-# Copyright (C) 2011 The Android Open Source Project
+#
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,25 +12,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-#
-# This file is the build configuration for a full Android
-# build for j7eltexx hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps). Except for a few implementation
-# details, it only fundamentally contains two inherit-product
-# lines, full and j7eltexx, hence its name.
 #
 
-PRODUCT_RUNTIMES := runtime_libart_default
+# Inherit device configuration
+$(call inherit-product, device/samsung/j7eltexx/device.mk)
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/samsung/j7eltexx/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := j7eltexx
-PRODUCT_DEVICE := j7elte
-PRODUCT_BRAND := Samsung
-PRODUCT_MANUFACTURER := samsung
+## Device identifier. This must come after all inclusions
+PRODUCT_NAME := full_j7eltexx
+PRODUCT_DEVICE := j7eltexx
+PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-J700F
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
