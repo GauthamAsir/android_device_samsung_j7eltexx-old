@@ -1,2 +1,1 @@
-add_lunch_combo lineage_j7eltexx-eng
-add_lunch_combo lineage_j7eltexx-userdebug
+add_lunch_combo aosp_j7eltexx-userdebug
