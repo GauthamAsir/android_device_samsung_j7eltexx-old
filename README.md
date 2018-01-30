@@ -9,7 +9,7 @@ Copyright (C) 2016-2017 Apavayan Sinha <info@apavayan.com>
 
 **Notice:** This is **Work In Progress** so it might not work
 
-Device Tree For Samsung Galaxy A3 (2016)
+Device Tree For Samsung Galaxy J7 (2015)
 =====================================
 
 Basic   | Spec Sheet
@@ -26,8 +26,8 @@ Display | 4,7"
 Rear Camera  | 13 MP, f/1.9, 31mm, 1080p@30fps, autofocus, LED flash
 Front Camera  | 5 MP, f/1.9, 23mm
 
-![Galaxy A3 (2016)](http://drop.ndtv.com/TECH/product_database/images/1232015120413AM_635_samsung_galaxy_a3_2016.jpeg "Galaxy A3 (2016)")
+![Galaxy J7 (2015)](https://aicdn.files.wordpress.com/2017/06/j7-2015-will-get-nougat.jpg "Galaxy J7 (2015)")
 
-This branch is for building Lineage 14.1 Firmware.
+This branch is for building Aosp Extended Firmware.
 
-Model Supported : SM-A310F SM-A310M
+Model Supported : SM-J700F
