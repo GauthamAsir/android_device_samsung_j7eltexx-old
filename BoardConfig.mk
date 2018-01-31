@@ -42,8 +42,7 @@ TARGET_KERNEL_HEADER_ARCH := arm
 # PowerHAL
 TARGET_POWERHAL_VARIANT := samsung
 
-# AudioHAl
-TARGET_AUDIOHAL_VARIANT := samsung
+
 
 # Extracted with libbootimg
 #BOARD_KERNEL_SEPARATED_DT := true
