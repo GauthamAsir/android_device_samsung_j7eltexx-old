@@ -101,6 +101,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     modemloader
+    
+# Camera
+PRODUCT_PACKAGES += \
+     Snap
 
 # cpboot-daemon for modem
 PRODUCT_COPY_FILES += \
