@@ -103,6 +103,8 @@ PRODUCT_PACKAGES += \
     modemloader
     
 # Camera
+ PRODUCT_PACKAGES += \
+      libxml2
 PRODUCT_PACKAGES += \
      Snap
 
