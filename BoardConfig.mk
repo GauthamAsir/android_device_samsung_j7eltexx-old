@@ -42,7 +42,11 @@ TARGET_KERNEL_HEADER_ARCH := arm
 # PowerHAL
 TARGET_POWERHAL_VARIANT := samsung
 
-
+# Charger
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 
 # Extracted with libbootimg
 #BOARD_KERNEL_SEPARATED_DT := true
