@@ -261,4 +261,9 @@
                3 - Really go to sleep and go home (don't doze)
   -->
    <integer name="config_shortPressOnPowerBehavior">1</integer>
+   
+   <!-- Support in Surfaceflinger for blur layers.
+         NOTE: This requires additional hardware-specific code. -->
+   <bool name="config_ui_blur_enabled">true</bool>
+
 </resources>
