@@ -50,8 +50,8 @@
 # mscalers
 /dev/video50              0660   media      media
 /dev/video51              0660   media      media
-/dev/m2m1shot_scaler0     0660   media      media
-/dev/m2m1shot_scaler1     0660   media      media
+/dev/m2m1shot_scaler0     0666   media      media
+/dev/m2m1shot_scaler1     0666   media      media
 
 /dev/video55              0666   system     graphics
 /dev/fimg2d               0666   system     graphics
