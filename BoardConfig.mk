@@ -42,7 +42,8 @@ TARGET_KERNEL_HEADER_ARCH := arm
 # PowerHAL
 TARGET_POWERHAL_VARIANT := samsung
 
-
+# DT2W
+TARGET_TAP_TO_WAKE_NODE := /sys/class/sec/tsp/dt2w_enable
 
 # Extracted with libbootimg
 #BOARD_KERNEL_SEPARATED_DT := true
