@@ -36,11 +36,32 @@ PRODUCT_AAPT_PREBUILT_DPI := hdpi mdpi
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
+#Charger
+# Use cm images if available, aosp ones otherwise
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    cm_charger_res_images
+	
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    make_ext4fs \
+    setup_fs	
+	
+# Graphics
+PRODUCT_PACKAGES += \
+    gralloc.exynos5 \
+    hwcomposer.exynos5 \
+		libion \
+		libfimg	
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml
-
+	$(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+	
+	
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
@@ -103,17 +124,25 @@ PRODUCT_PACKAGES += \
     modemloader
     
 # Camera
- PRODUCT_PACKAGES += \
-      libxml2
+PRODUCT_PACKAGES += \
+     libxml2
 PRODUCT_PACKAGES += \
      Snap
 
 # cpboot-daemon for modem
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ril/sbin/cbd:root/sbin/cbd
+	
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/thermal-engine.conf:system/etc/thermal-engine.conf	
+	
+#Doze
+PRODUCT_COPY_FILES += \
+	SamsungDoze
 
 # Inherit from Exynos7580-common
-$(call inherit-product, device/samsung/exynos7580-common/device-common.mk)
+	$(call inherit-product, device/samsung/exynos7580-common/device-common.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/j7eltexx/j7eltexx-vendor.mk)
+	$(call inherit-product-if-exists, vendor/samsung/j7eltexx/j7eltexx-vendor.mk)
