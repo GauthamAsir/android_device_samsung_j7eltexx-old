@@ -474,11 +474,14 @@ on charger
 on property:sys.tzdaemon=Ready
     start taa_service
 
-# EHCI runtime enable for LPA
+# EHCI runtime enable for charging mode
     write /sys/devices/platform/s5p-ehci/power/control auto
 
 # Do not set any USB mode while charging
     setprop sys.usb.config charging
+	
+on property:sys.tzdaemon=Ready
+    start taa_servic
 
 
 # DRK/CS service
