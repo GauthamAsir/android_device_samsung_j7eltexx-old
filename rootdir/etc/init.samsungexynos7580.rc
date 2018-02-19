@@ -475,12 +475,14 @@ on charger
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor powersave
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor powersave
 
-    # EHCI runtime enable for LPA
+# EHCI runtime enable for charging mode
     write /sys/devices/platform/s5p-ehci/power/control auto
 
-    # Do not set any USB mode while charging
+# Do not set any USB mode while charging
     setprop sys.usb.config charging
 
+on property:sys.tzdaemon=Ready
+    start taa_service
 
 # DRK/CS service
 service cs_service /system/bin/cs
