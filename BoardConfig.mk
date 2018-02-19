@@ -29,7 +29,7 @@ TARGET_UNIFIED_DEVICE := true
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_j7elte_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/j7eltexx
+TARGET_KERNEL_SOURCE := kernel/samsung/j7elte
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 
