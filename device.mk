@@ -118,11 +118,7 @@ PRODUCT_COPY_FILES += \
 	
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media/thermal-engine.conf:system/etc/thermal-engine.conf	
-	
-#Doze
-PRODUCT_COPY_FILES += \
-	SamsungDoze
+    $(LOCAL_PATH)/configs/media/thermal-engine.conf:system/etc/thermal-engine.conf		
 
 # Inherit from Exynos7580-common
 $(call inherit-product, device/samsung/exynos7580-common/device-common.mk)
