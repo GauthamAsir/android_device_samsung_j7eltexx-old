@@ -105,8 +105,6 @@ PRODUCT_PACKAGES += \
 # Camera
  PRODUCT_PACKAGES += \
       libxml2
-PRODUCT_PACKAGES += \
-     Snap
 
 # cpboot-daemon for modem
 PRODUCT_COPY_FILES += \
