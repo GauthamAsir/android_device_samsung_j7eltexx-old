@@ -22,6 +22,9 @@ $(call inherit-product, vendor/aosp/common.mk)
 # Include Bootanimation configuration
 TARGET_BOOT_ANIMATION_RES := 720
 
+# Use Magisk
+DEFAULT_ROOT_METHOD := magisk
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := aosp_j7eltexx
 PRODUCT_RELEASE_NAME := SM-J700F
