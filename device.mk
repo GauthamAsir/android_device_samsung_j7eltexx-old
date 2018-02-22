@@ -40,16 +40,18 @@ TARGET_SCREEN_WIDTH := 720
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml
+	$(LOCAL_PATH)/configs/audio/mixer_gains.xml:system/etc/mixer_gains.xml
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+		
 
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/configs/gps/gps.xml:system/etc/gps.xml
-
+	
 # Key-layout
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/idc/Synaptics_HID_TouchPad.idc:system/usr/idc/Synaptics_HID_TouchPad.idc \
@@ -67,8 +69,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
 
 # Power
+PRODUCT_COPY_FILES += \
+		$(LOCAL_PATH)/rootdir/etc/external/healthd:root/sbin/healthd	
+	
+# Power
 PRODUCT_PACKAGES += \
-    power.universal7580
+    power.exynos5
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -83,6 +89,7 @@ PRODUCT_PACKAGES += \
     init.samsungexynos7580.usb.rc \
     init.wifi.rc \
     ueventd.samsungexynos7580.rc
+	init.battery.rc
 
 # Wi-fi
 PRODUCT_COPY_FILES += \
@@ -96,12 +103,20 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 # Samsung
 PRODUCT_PACKAGES += \
     SamsungServiceMode
+	
+# Samsung's SSWAP
+PRODUCT_COPY_FILES += \
+		$(LOCAL_PATH)/rootdir/etc/external/sswap:root/sbin/sswap	
 
 # Ril
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     modemloader
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap	
+	
 # cpboot-daemon for modem
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ril/sbin/cbd:root/sbin/cbd
