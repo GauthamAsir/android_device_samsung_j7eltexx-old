@@ -39,7 +39,7 @@ TARGET_SCREEN_WIDTH := 720
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
 	$(LOCAL_PATH)/configs/audio/mixer_gains.xml:system/etc/mixer_gains.xml
 
 # Bluetooth
@@ -88,7 +88,7 @@ PRODUCT_PACKAGES += \
     init.samsungexynos7580.rc \
     init.samsungexynos7580.usb.rc \
     init.wifi.rc \
-    ueventd.samsungexynos7580.rc
+    ueventd.samsungexynos7580.rc \
 	init.battery.rc
 
 # Wi-fi
