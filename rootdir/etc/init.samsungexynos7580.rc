@@ -294,6 +294,7 @@ on fs
 # Permissions for TouchScreen
     chown system radio /sys/class/sec/tsp/cmd
     chown system system /sys/class/sec/tsp/input/enabled
+	chown system system /sys/class/sec/tsp/dt2w_enabled
 
 # Permissions for Touchkey
     chown system radio /sys/class/sec/sec_touchkey/brightness

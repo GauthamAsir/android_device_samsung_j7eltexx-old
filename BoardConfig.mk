@@ -75,5 +75,8 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.samsungexynos7580
 BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 BOARD_MODEM_TYPE := tss310
 
+# DT2W
+TARGET_TAP_TO_WAKE_NODE := /sys/class/sec/tsp/dt2w_enable
+
 # inherit from the proprietary version
 -include vendor/samsung/j7eltexx/BoardConfigVendor.mk

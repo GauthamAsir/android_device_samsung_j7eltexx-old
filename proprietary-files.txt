@@ -29,6 +29,7 @@ lib/libwrappergps.so
 
 ### Graphics
 vendor/lib/egl/libGLES_mali.so
+vendor/lib/libuiblur.so
 
 ### Media
 # S5P Multi Format Codec
