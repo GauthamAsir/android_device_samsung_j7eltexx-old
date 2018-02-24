@@ -96,7 +96,7 @@ PRODUCT_PACKAGES += \
 	
 # Samsung's SSWAP
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/ramdisk/external/sswap:root/sbin/sswap
+	$(LOCAL_PATH)/rootdir/etc/external/sswap:root/sbin/sswap
 	
 # RIL
 PRODUCT_COPY_FILES += \
@@ -111,7 +111,7 @@ PRODUCT_PACKAGES += \
 	
 # Power
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/ramdisk/external/healthd:root/sbin/healthd
+	$(LOCAL_PATH)/rootdir/etc/external/healthd:root/sbin/healthd
 
 # Power packages
 PRODUCT_PACKAGES += \
