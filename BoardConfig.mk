@@ -32,6 +32,7 @@ BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_sec
+TARGET_UNIFIED_DEVICE := true
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_j7elte_defconfig
@@ -63,6 +64,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+# Charger
+BACKLIGHT_PATH := /sys/devices/14800000.dsim/backlight/panel/brightness
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.samsungexynos7580

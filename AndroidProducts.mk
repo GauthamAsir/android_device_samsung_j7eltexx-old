@@ -16,4 +16,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-$(LOCAL_DIR)/aosp_j7eltexx.mk
+    $(LOCAL_DIR)/full_j7eltexx.mk \
+    $(LOCAL_DIR)/dot.mk

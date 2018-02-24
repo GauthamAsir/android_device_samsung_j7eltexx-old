@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
+#           (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,17 +15,20 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/samsung/j7eltexx/full_j7eltexx.mk)
+# Inherit device configuration
+$(call inherit-product, device/samsung/j7eltexx/device.mk)
 
-# Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Include Bootanimation configuration
-TARGET_BOOT_ANIMATION_RES := 720
+# Inherit common CM phone.
+$(call inherit-product, vendor/dot/config/common_full_phone.mk)
 
 # Use Magisk
 DEFAULT_ROOT_METHOD := magisk
 
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := aosp_j7eltexx
-PRODUCT_RELEASE_NAME := SM-J700F
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := dot_j7eltexx
+PRODUCT_DEVICE := j7eltexx
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung

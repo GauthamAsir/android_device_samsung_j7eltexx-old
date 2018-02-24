@@ -66,10 +66,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
 
-# Power
-PRODUCT_PACKAGES += \
-    power.universal7580
-
 # Shims
 PRODUCT_PACKAGES += \
     libshim_gpsd
@@ -82,8 +78,9 @@ PRODUCT_PACKAGES += \
     init.samsungexynos7580.rc \
     init.samsungexynos7580.usb.rc \
     init.wifi.rc \
-    ueventd.samsungexynos7580.rc
-
+    ueventd.samsungexynos7580.rc \
+	init.battery.rc
+	
 # Wi-fi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/cred.conf:system/etc/wifi/cred.conf \
@@ -96,11 +93,29 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 # Samsung
 PRODUCT_PACKAGES += \
     SamsungServiceMode
-
-# Ril
+	
+# Samsung's SSWAP
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/ramdisk/external/sswap:root/sbin/sswap
+	
+# RIL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/radio/apns-conf.xml:system/etc/apns-conf.xml \
+    $(LOCAL_PATH)/configs/radio/cbd:system/bin/cbd \
+    $(LOCAL_PATH)/rootdir/etc/rild.rc:system/etc/init/rild.rc
+	
+# Ril-packages
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     modemloader
+	
+# Power
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/ramdisk/external/healthd:root/sbin/healthd
+
+# Power packages
+PRODUCT_PACKAGES += \
+    power.exynos5	
 
 # cpboot-daemon for modem
 PRODUCT_COPY_FILES += \
