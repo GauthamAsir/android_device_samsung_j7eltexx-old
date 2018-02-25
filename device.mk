@@ -39,8 +39,9 @@ TARGET_SCREEN_WIDTH := 720
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml
-
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+	$(LOCAL_PATH)/configs/audio/mixer_gains.xml:system/etc/mixer_gains.xml
+	
 # Bluetooth
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
@@ -112,6 +113,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/etc/external/healthd:root/sbin/healthd
+	
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/thermal-engine.conf:system/etc/thermal-engine.conf	
 
 # Power packages
 PRODUCT_PACKAGES += \
