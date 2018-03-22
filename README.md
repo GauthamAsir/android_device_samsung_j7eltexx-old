@@ -19,4 +19,4 @@ Front Camera  | 5 MP, f/1.9, 23mm
 
 ![Galaxy J7 (2015)](https://aicdn.files.wordpress.com/2017/06/j7-2015-will-get-nougat.jpg "Galaxy J7 (2015)")
 
-Model Supported : SM-J700F
+Model Supported : SM-J700F/M
