@@ -1,5 +1,9 @@
 # Audio
 audio_hal.disable_two_mic=true
+af.fast_track_multiplier=1
+
+# Bluetooth
+qcom.bluetooth.soc=rome
 
 # Display
 ro.sf.lcd_density=320
@@ -13,6 +17,9 @@ dalvik.vm.heapsize=512m
 dalvik.vm.heaptargetutilization=0.75
 dalvik.vm.heapminfree=2m
 dalvik.vm.heapmaxfree=8m
+
+# HWC
+debug.hwc.force_gpu=1
 
 #
 # HWUI_BUILD_PROPERTIES
@@ -34,9 +41,31 @@ ro.hwui.fbo_cache_size=8
 # FRP
 #ro.frp.pst=/dev/block/persistent
 
-# Games
+# Misc
+ro.chipname=exynos7580
+ro.arch=exynos7580
 
-debug.egl.force_msaa=true
+# Battery Tweaks
+power.saving.mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.power_collapse=1
+power_supply.wakeup=enable
+
+# JPEG Quality
+ro.media.enc.jpeg.quality=100
+
+# GMS
+ro.product.first_api_level=22
+
+# Storage
+ro.sys.sdcardfs=1
+
+# Telephony tweaks
+ro.telephony.samsung.realcall=true
+ro.multisim.set_audio_params=true
+
+# Read DS/SS property
+import /efs/factory.prop
 
 # Radio
 telephony.lteOnCdmaDevice=0
