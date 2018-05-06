@@ -57,9 +57,6 @@ ro.media.enc.jpeg.quality=100
 # GMS
 ro.product.first_api_level=22
 
-# Storage
-ro.sys.sdcardfs=1
-
 # Telephony tweaks
 ro.telephony.samsung.realcall=true
 ro.multisim.set_audio_params=true
