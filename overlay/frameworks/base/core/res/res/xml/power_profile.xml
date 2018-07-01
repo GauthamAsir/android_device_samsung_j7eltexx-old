@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">52</item>
-    <item name="screen.full">270</item>
+    <item name="screen.on">62</item>
+    <item name="screen.full">242</item>
     <item name="bluetooth.on">0.5</item>
-    <item name="bluetooth.active">122</item>
+    <item name="bluetooth.active">57</item>
     <item name="wifi.on">0.29</item>
-    <item name="wifi.scan">292</item>
-    <item name="wifi.active">699</item>
+    <item name="wifi.scan">66</item>
+    <item name="wifi.active">209</item>
     <item name="gps.on">61.4</item>
     <item name="dsp.audio">40</item>
     <item name="dsp.video">196</item>
@@ -31,7 +31,6 @@
         <value>500000</value>
         <value>400000</value>
     </array>
-    <item name="cpu.idle">2</item>
     <array name="cpu.active">
         <value>141</value>
         <value>126</value>
